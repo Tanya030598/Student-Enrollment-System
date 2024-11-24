@@ -100,20 +100,22 @@ VALUES
 
 -- SQL Queries --
 -- Basic Queries--
+
 Query 1: Select all students
-Ans-- SELECT * FROM Students;
+Ans-- Select * From Students;
 
 Query 2: Select students enrolled in a particular course (e.g., "Introduction to Computer Science")
-Ans-- SELECT s.first_name, s.last_name
+Ans-- Select s.first_name, s.last_name,c.course_name
       FROM Students s
       JOIN Enrollments e ON s.student_id = e.student_id
       JOIN Courses c ON e.course_id = c.course_id
       WHERE c.course_name = 'Introduction to Computer Science';
 
 Query 3: Select all courses a student is enrolled in (e.g., student with ID 1)
-Ans-- SELECT c.course_name, c.instructor
-      FROM Courses c
-      JOIN Enrollments e ON c.course_id = e.course_id
+Ans-- SELECT s.first_name,c.course_name, c.instructor
+      FROM students s
+      Join enrollments e on e.student_id=s.student_id
+      JOIN courses c ON c.course_id = e.course_id
       WHERE e.student_id = 1;
 
 Query 4: Find students with a specific email domain
@@ -126,19 +128,21 @@ Ans-- SELECT course_name, credits
       FROM Courses;
 
 -- Intermediate Queries --
+
 Query 1: Count the number of students enrolled in each course
 Ans-- SELECT c.course_name, COUNT(e.student_id) AS num_students
       FROM Courses c
-      LEFT JOIN Enrollments e ON c.course_id = e.course_id
+      Left JOIN Enrollments e ON c.course_id = e.course_id
       GROUP BY c.course_name;
 
 Query 2: List students who are enrolled in more than 2 courses
-Ans-- SELECT s.first_name, s.last_name, COUNT(e.course_id) AS num_courses
+Ans-- SELECT s.first_name, s.last_name, COUNT(c.course_id) AS num_courses
       FROM Students s
       JOIN Enrollments e ON s.student_id = e.student_id
+      Join courses c on c.course_id=e.course_id
       GROUP BY s.student_id
-      HAVING COUNT(e.course_id) > 2;
-
+      HAVING num_courses > 2;
+ 
 Query 3: Select courses with more than 3 credits
 Ans-- SELECT course_name, credits
       FROM Courses
@@ -153,13 +157,8 @@ Ans-- SELECT s.first_name, s.last_name
       GROUP BY s.student_id
       HAVING COUNT(DISTINCT c.course_name) = 2;
 
-Query 5: Find the average number of students enrolled in each course
-Ans-- SELECT AVG(num_students) AS avg_enrollment
-      FROM (SELECT COUNT(e.student_id) AS num_students
-      FROM Enrollments e
-      GROUP BY e.course_id) AS course_enrollments;
-
 -- Advanced Queries --
+
 Query 1: Find the most popular course (course with the highest enrollment)
 Ans-- SELECT c.course_name, COUNT(e.student_id) AS num_students
       FROM Courses c

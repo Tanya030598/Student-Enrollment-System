@@ -168,10 +168,10 @@ Ans-- SELECT c.course_name, COUNT(e.student_id) AS num_students
       LIMIT 1;
 
 Query 2: Find students who are not enrolled in any courses
-Ans-- SELECT s.first_name, s.last_name
+Ans-- SELECT s.first_name, s.last_name,e.course_id
       FROM Students s
       LEFT JOIN Enrollments e ON s.student_id = e.student_id
-      WHERE e.student_id IS NULL;
+      WHERE e.course_id IS NULL;
 
 Query 3: Find the course with the maximum number of students enrolled per semester
 Ans-- SELECT c.course_name, COUNT(e.student_id) AS num_students

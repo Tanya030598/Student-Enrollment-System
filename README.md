@@ -1,6 +1,7 @@
-PROJECT TITLE: **Pizza-Order-Management**
+PROJECT TITLE: **Student-Enrollment-System**
 
-DESCRIPTION: A system for handling pizza orders, allowing customers to add items to their cart, and track orders.
+DESCRIPTION: In this project we helps to manage student, course registrations, and grades. It uses a database to store information about students, courses, enrollments, and teachers, 
+             making it easy to update and find academic records.
 
 PURPOSE: Purpose of this sql project is to streamline pizza ordering, manage and manipulate data.
 

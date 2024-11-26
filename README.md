@@ -5,7 +5,9 @@ DESCRIPTION: In this project we helps to manage student, course registrations, a
 
 PURPOSE: The purpose of this project is to make it easier to manage student data, registrations, and grades. It helps store, update, and retrieve the data.
 
-TECHNICAL SKILLS: In this project we have used joins, left join, where, order by and aggregate functions, etc.
+TECHNICAL SKILLS: In this project we create and managing data using joins, left join, where, order by and aggregate functions, etc.
+                  Writing complex queries (JOINs, subqueries, etc.)
+                  Performing CRUD operations (Create, Read, Update, Delete)                  
 
 RESULT: This System helps manage student information, course sign-ups, and grades using SQL. It makes it easy to track student progress and access their records.
 

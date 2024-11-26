@@ -3,10 +3,10 @@ PROJECT TITLE: **Student-Enrollment-System**
 DESCRIPTION: In this project we helps to manage student, course registrations, and grades. It uses a database to store information about students, courses, enrollments, and teachers, 
              making it easy to update and find academic records.
 
-PURPOSE: Purpose of this sql project is to streamline pizza ordering, manage and manipulate data.
+PURPOSE: The purpose of this project is to make it easier to manage student data, registrations, and grades. It helps store, update, and retrieve the data.
 
-TECHNICAL SKILLS: In this project we have used joins and aggregate functions.
+TECHNICAL SKILLS: In this project we have used joins, left join, where, order by and aggregate functions, etc.
 
-RESULT: A fully functional pizza order management system that efficiently handles order browsing, order tracking and analyze the revenue and expenses.
+RESULT: This System helps manage student information, course sign-ups, and grades using SQL. It makes it easy to track student progress and access their records.
 
-LINK: https://github.com/Tanya030598/Pizza-Order-Managemant/blob/main/pizza_order_management.sql
+LINK: https://github.com/Tanya030598/Student-Enrollment-System

@@ -11,4 +11,4 @@ TECHNICAL SKILLS: In this project we create and managing data using joins, left 
 
 RESULT: This System helps manage student information, course sign-ups, and grades using SQL. It makes it easy to track student progress and access their records.
 
-LINK: https://github.com/Tanya030598/Student-Enrollment-System
+LINK: https://github.com/Tanya030598/Student-Enrollment-System/blob/main/student-enrollment.sql
